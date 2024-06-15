@@ -1,0 +1,19 @@
+<style>
+.indented-text {
+    text-indent: 20px; 
+}
+.image-with-shadow {box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);}
+body {transition: background-color 0.3s, color 0.3s;}
+body {
+    background-color: #dde9ed; 
+    transition: background-color 0.3s, color 0.3s;
+    color: black; }
+.dark-mode {background-color: black; color: white;}
+.dark-mode table, .dark-mode th, .dark-mode td {border-color: black; /* 夜间模式下表格边框颜色为黑色 */}
+table, th, td {
+    border: 1px solid #dde9ed; 
+    border-width: 3px;
+    border-collapse: collapse; 
+    vertical-align: bottom; 
+}
+</style>
