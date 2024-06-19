@@ -19,13 +19,17 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            /* 修改width为100%，让容器宽度适应屏幕宽度 */
+            width: 100%;
+            max-width: 400px; /* 可以设置最大宽度，防止在大屏幕上过宽 */
+            box-sizing: border-box; /* 边框计算在宽度内 */
         }
         .login-title {
-            font-size: 20px;
+            font-size: 30px;
             font-weight: bold;
             margin-bottom: 20px;
         }
+        /* 移除多余的<br>标签，它们会影响布局 */
         .input-group {
             margin-bottom: 10px;
         }
@@ -63,6 +67,7 @@
         }
         .footer-links {
             text-align: center;
+            margin-top: 20px; /* 给底部链接一些空间 */
         }
         .footer-links a {
             text-decoration: none;
@@ -77,8 +82,8 @@
 </head>
 <body>
     <div class="login-container">
-        <div  class="login-title" style="font-size: 30px;">欢迎使用</div>
-        <br><br><br><br><br><br>
+        <div class="login-title">欢迎使用</div>
+        <!-- 移除多余的空行 -->
         <div class="input-group">
             <label for="student-id">请输入您的学号</label>
             <input type="text" id="student-id" placeholder="学号">
@@ -87,26 +92,21 @@
             <label for="password">请输入您的密码</label>
             <input type="password" id="password" placeholder="密码">
         </div>
-        <button class="button" id="登录">登录</button>
+        <button class="button" id="login">登录</button>
         <div class="footer-links">
             <a href="#">忘记密码</a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
             <a href="#">注册账号</a>
+            <!-- 移除了多余的空链接 -->
         </div>
-        <br><br><br><br><br><br><br>
     </div>
-</body>
-<script>
-    // 将JavaScript代码放在<script>标签中
-    document.addEventListener('DOMContentLoaded', function() {
-        var introImage = document.getElementById('登录');
-        introImage.addEventListener('click', function() {
-            window.location.href = 'https://jintianjiuxiangsi.github.io/chuanbo/课程信息页.html'; // 替换成你想要跳转的URL
+    <script>
+        // JavaScript代码保持不变
+        document.addEventListener('DOMContentLoaded', function() {
+            var loginButton = document.getElementById('login');
+            loginButton.addEventListener('click', function() {
+                window.location.href = 'https://jintianjiuxiangsi.github.io/chuanbo/课程信息页.html';  // 替换成你想要跳转的URL
+            });
         });
-    });
-</script>
+    </script>
+</body>
 </html>
